@@ -1,0 +1,13 @@
+$color-blue: #4F8FF0
+$color-black: black
+$color-white: white
+*, after, before
+    padding: 0
+    margin: 0
+html
+    font-family: "Nunito Sans"
+    font-size: 62.5%
+.container
+    display: grid
+    grid-template-columns: [full-start] 1fr [content-start] repeat(12, minamax(3.3rem,11rem)) [content-end] 1fr [full-end]
+    grid-template-rows: 5.2rem
