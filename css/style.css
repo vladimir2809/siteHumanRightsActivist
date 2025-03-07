@@ -52,6 +52,20 @@ html {
   text-transform: uppercase;
   background-color: #4F8FF0;
   color: white;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.button:hover {
+  background-color: white;
+  border: 2px solid #4F8FF0;
+  color: #4F8FF0;
+}
+.button:active {
+  background-color: #F7F7F7;
+  border: 2px solid #F7F7F7;
+  color: black;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .header {
@@ -238,7 +252,7 @@ html {
 .services__content {
   grid-column: content-start-2/content-end-2;
   grid-row: 1/2;
-  padding: 8rem 2.4rem;
+  padding: 8rem 0;
 }
 .services__header {
   display: grid;
@@ -291,6 +305,7 @@ html {
   -webkit-transition: 1s;
   transition: 1s;
   position: relative;
+  margin-bottom: 4.8rem;
 }
 .services-item__img {
   margin-bottom: 1.5rem;
@@ -345,4 +360,12 @@ html {
 }
 .services-item:hover .services-item__hover-border {
   display: block;
+}
+
+.services-button {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
