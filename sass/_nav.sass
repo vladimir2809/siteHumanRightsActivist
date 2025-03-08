@@ -1,10 +1,16 @@
 .nav
     &__list
         list-style-type: none
+        display: flex
+        justify-content: space-between
+        &:last-child
+            margin-right: 0rem
     &__item
         display: inline-block
-        &:not(:last-child)
-            margin-right: 3.2rem
+        //&:not(:last-child)
+        //margin-right: 3.2rem
+        &:last-child
+            //margin-right: 1rem
     &__link
         text-decoration: none
         font-family: Nunito Sans
@@ -15,4 +21,5 @@
         text-align: center
         //color: $color-white
         color: $color-white
-
+        &:last-child
+            margin-right: 0

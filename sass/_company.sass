@@ -1,0 +1,55 @@
+.company
+    grid-column: 1 / -1
+    grid-row: 3 / 4
+    display: grid
+    grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
+    grid-template-rows: 59rem//42.4rem
+    background-color: $color-white
+    &__content
+        grid-column: content-start-2 / content-end-2 
+        padding: 6rem 1.2rem
+    &__container
+        //grid-column: content-start-2 / content-end-2 
+        display: grid
+        grid-template-columns:  55% 45%
+        grid-template-rows: max-content 
+        grid-gap: 6.4rem
+        margin-bottom: 2.4rem
+        //padding: 1.2rem
+    &__text
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+    &__title
+        font-family: Nunito Sans
+        font-weight: 800
+        font-size: 2.8rem
+        line-height: 150%
+        letter-spacing: 0%
+        text-transform: uppercase
+        color: $color-black
+    &__title-span
+        color: $color-blue
+    &__line
+        width: 5rem
+        height: .3rem
+        border: 2px solid $color-blue
+        margin-bottom: 2.4rem
+    &__paragraph
+        font-family: Nunito Sans
+        font-weight: 400
+        font-size: 1.6rem
+        line-height: 150%
+        letter-spacing: 0%
+        color: $color-black-gray
+        margin-bottom: 2.4rem
+    &__button-1
+        width: 21rem
+        margin-right: 2.4rem
+    &__buttom-2
+
+    &__img
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+        width: 100%
+        height: 100%
+        
