@@ -1,0 +1,79 @@
+.ourLawers
+    grid-column: 1 / -1
+    grid-row: 4 / 5
+    display: grid
+    grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
+    grid-template-rows: 100% //59rem//42.4rem
+    background-color: $color-gray-light
+    &__content
+        grid-column: content-start-2 / content-end-2 
+        padding: 6rem 1.2rem
+    &__container
+    &__list
+.lawers-item
+    width: 31.1rem
+    height: 41.4rem
+    background-color: $color-white
+    &__back
+        z-index: -1
+        width: 31.1rem
+        height: 41.4rem
+        // display: block
+        // &:hover
+        //     display: none
+    &__img-back
+        width: 31.2rem
+        height: 32rem
+        margin-bottom: 2.4rem
+    &__name-back, &__name-front
+        font-family: Nunito Sans
+        font-weight: 700
+        font-size: 1.6rem
+        line-height: 120%
+        letter-spacing: 0%
+        text-align: center
+        margin-bottom: 1rem
+    &__status-back, &__status-front
+        font-family: Nunito Sans
+        font-weight: 300
+        font-size: 1.4rem
+        line-height: 120%
+        letter-spacing: 0%
+        text-align: center
+        text-transform: lowercase
+    &__front
+        //display: none
+        width: 31.1rem
+        height: 41.4rem
+        position: relative
+        top: -42rem
+        padding: 8.4rem 2rem  
+        z-index: 0
+        background-color: $color-white
+        transition: 1s
+        opacity: 0
+        &:hover
+            opacity: 1
+            //display: block
+    &__status-front
+        margin-bottom: 4rem
+    &__paragraph-front
+        font-family: Nunito Sans
+        font-weight: 300
+        font-size: 1.4rem
+        line-height: 120%
+        letter-spacing: 0%
+        text-align: center
+        margin-bottom: 4rem
+    &__stage-front
+        font-family: Nunito Sans
+        font-weight: 600
+        font-size: 1.6rem
+        line-height: 120%
+        letter-spacing: 0%
+        text-align: center
+
+
+
+
+
