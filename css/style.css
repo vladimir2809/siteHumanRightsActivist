@@ -470,8 +470,15 @@ html {
 }
 .ourLawers__content {
   grid-column: content-start-2/content-end-2;
-  padding: 6rem 1.2rem;
+  padding: 6rem 0rem;
 }
+.ourLawers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.4rem;
+}
+
 .lawers-item {
   width: 31.1rem;
   height: 41.4rem;
@@ -539,4 +546,16 @@ html {
   line-height: 120%;
   letter-spacing: 0%;
   text-align: center;
+}
+.lawers-item__border-front {
+  position: relative;
+  top: -30.5rem;
+}
+.lawers-item__pointer-front {
+  position: relative;
+  top: -33.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
