@@ -17,7 +17,7 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, minamax(3.3rem, 11rem)) [content-end] 1fr [full-end];
-  grid-template-rows: 87.2rem 96rem 59rem 74rem;
+  grid-template-rows: 87.2rem 96rem 59rem 74rem 59rem;
 }
 
 .logo__title {
@@ -112,6 +112,30 @@ html {
   letter-spacing: 0%;
   text-align: center;
   width: 92rem;
+}
+
+.avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.avatar__organization {
+  font-family: Nunito Sans;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+.avatar__name {
+  font-family: Nunito Sans;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 150%;
+  letter-spacing: 0%;
 }
 
 .header {
@@ -558,4 +582,76 @@ html {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.talkAbout {
+  grid-column: 1/-1;
+  grid-row: 5/6;
+  display: grid;
+  grid-template-columns: 1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr;
+  background: url(../img/background-talkAbout.png) no-repeat center/cover;
+}
+.talkAbout__content {
+  grid-column: content-start-2/content-end-2;
+  padding: 6rem 1.2rem;
+}
+.talkAbout__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.talkAbout__title {
+  font-family: Nunito Sans;
+  font-weight: 900;
+  font-size: 2.8rem;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #222222;
+  margin-bottom: 1rem;
+}
+.talkAbout__line {
+  width: 5rem;
+  height: 0.3rem;
+  border: 2px solid #4F8FF0;
+}
+.talkAbout__container {
+  margin-bottom: 3.2rem;
+}
+.talkAbout__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.4rem;
+}
+.talkAbout__button-1 {
+  margin-right: 2.4rem;
+}
+
+.talkAbout-item {
+  width: 64.8rem;
+  height: 24.4rem;
+  padding: 3.2rem;
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(33, 33, 33, 0.1490196078);
+          box-shadow: 2px 2px 10px 0px rgba(33, 33, 33, 0.1490196078);
+}
+.talkAbout-item__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+.talkAbout-item__paragraph {
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0%;
 }
