@@ -17,7 +17,7 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, minamax(3.3rem, 11rem)) [content-end] 1fr [full-end];
-  grid-template-rows: 87.2rem 96rem 59rem 74rem 59rem;
+  grid-template-rows: 87.2rem 96rem 59rem 74rem 59rem 91rem;
 }
 
 .logo__title {
@@ -508,6 +508,9 @@ html {
   height: 41.4rem;
   background-color: white;
 }
+.lawers-item:hover {
+  cursor: pointer;
+}
 .lawers-item__back {
   z-index: -1;
   width: 31.1rem;
@@ -653,5 +656,129 @@ html {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.materials {
+  grid-column: 1/-1;
+  grid-row: 6/7;
+  display: grid;
+  grid-template-columns: 1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr;
+}
+.materials__content {
+  grid-column: content-start-2/content-end-2;
+  padding: 8rem 0rem;
+}
+.materials__container {
+  margin-bottom: 5rem;
+}
+.materials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.4rem;
+}
+.materials__button {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.materials-item {
+  width: 42rem;
+  height: 48.1rem;
+}
+.materials-item:hover {
+  cursor: pointer;
+}
+.materials-item:hover .materials-item__front-rect {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+.materials-item:hover .materials-item__front-kvadr, .materials-item:hover .materials-item__front-glass, .materials-item:hover .materials-item__front-pointer {
+  opacity: 1;
+}
+.materials-item:hover .materials-item__title-5 {
+  color: #4F8FF0;
+}
+.materials-item__img {
+  margin-bottom: 2.4rem;
+}
+.materials-item__front {
+  position: relative;
+  z-index: 2;
+  top: -2.7rem;
+}
+.materials-item__front-background {
+  position: absolute;
+  top: -27rem;
+  z-index: 3;
+}
+.materials-item__front-rect {
+  position: absolute;
+  top: -25rem;
+  left: 2.5rem;
+  z-index: 5;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+.materials-item__front-kvadr {
+  position: absolute;
+  top: -15rem;
+  left: 18.5rem;
+  z-index: 5;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+.materials-item__front-glass {
+  position: absolute;
+  top: -14rem;
+  left: 19.5rem;
+  z-index: 6;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+.materials-item__front-pointer {
+  position: absolute;
+  top: -4.5rem;
+  left: 10rem;
+  z-index: 5;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+.materials-item__title-5 {
+  font-family: Nunito Sans;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #222222;
+  margin-bottom: 1.6rem;
+}
+.materials-item__date {
+  font-family: Nunito Sans;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #222222;
+  margin-bottom: 1.6rem;
+}
+.materials-item__paragraph {
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 120%;
   letter-spacing: 0%;
 }

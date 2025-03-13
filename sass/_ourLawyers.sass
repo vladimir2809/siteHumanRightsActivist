@@ -7,13 +7,17 @@
     background-color: $color-gray-light
     &__content
         grid-column: content-start-2 / content-end-2 
-        padding: 6rem 1.2rem
+        padding: 6rem 0rem
     &__container
     &__list
+        display: flex
+        gap: 2.4rem
 .lawers-item
     width: 31.1rem
     height: 41.4rem
     background-color: $color-white
+    &:hover
+        cursor: pointer
     &__back
         z-index: -1
         width: 31.1rem
@@ -72,6 +76,14 @@
         line-height: 120%
         letter-spacing: 0%
         text-align: center
+    &__border-front
+        position: relative
+        top: -30.5rem        
+    &__pointer-front
+        position: relative
+        top: -33.5rem  
+        left: 50%
+        transform: translateX(-50%)
 
 
 
