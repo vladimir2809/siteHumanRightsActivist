@@ -198,6 +198,10 @@ html {
   -moz-font-size: 3.3rem;
   line-height: 2.1rem;
   letter-spacing: 0%;
+}
+
+.contact-call a {
+  text-decoration: none;
   color: #4F8FF0;
 }
 
@@ -326,6 +330,9 @@ html {
   text-align: center;
   color: white;
 }
+.nav__link:hover {
+  color: #4F8FF0;
+}
 .nav__link:last-child {
   margin-right: 0;
 }
@@ -445,7 +452,7 @@ html {
 }
 .company__container {
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 53% 42.5%;
   grid-template-rows: -webkit-max-content;
   grid-template-rows: max-content;
   grid-gap: 6.4rem;
@@ -803,7 +810,8 @@ html {
   grid-column: content-start-2/content-end-2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 10rem 45rem 5rem;
+  grid-template-rows: 10rem 35rem;
+  padding: 0 1.2rem;
   padding-top: 8rem;
   grid-gap: 4.8rem;
 }
@@ -940,6 +948,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 1.2rem;
 }
 .rights__paragraph {
   font-family: Nunito Sans;
