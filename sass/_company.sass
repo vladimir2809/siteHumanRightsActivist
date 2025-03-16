@@ -2,7 +2,8 @@
     grid-column: 1 / -1
     grid-row: 3 / 4
     display: grid
-    grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
+    // grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
+    @include gridGeneralColumns
     grid-template-rows: 59rem//42.4rem
     background-color: $color-white
     &__content

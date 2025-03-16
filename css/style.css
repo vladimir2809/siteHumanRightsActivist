@@ -17,7 +17,7 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, minamax(3.3rem, 11rem)) [content-end] 1fr [full-end];
-  grid-template-rows: 87.2rem 96rem 59rem 74rem 59rem 91rem;
+  grid-template-rows: 87.2rem 96rem 59rem 74rem 59rem 91rem 53.5rem 5rem;
 }
 
 .logo__title {
@@ -136,6 +136,14 @@ html {
   font-size: 2rem;
   line-height: 150%;
   letter-spacing: 0%;
+}
+
+.margin-bottom-16 {
+  margin-bottom: 1.6rem;
+}
+
+.margin-right-16 {
+  margin-right: 1.6rem;
 }
 
 .header {
@@ -401,6 +409,7 @@ html {
 .services-item:hover {
   color: white;
   background-color: #4F8FF0;
+  cursor: pointer;
 }
 .services-item:hover .services-item__img {
   display: none;
@@ -781,4 +790,162 @@ html {
   font-size: 1.2rem;
   line-height: 120%;
   letter-spacing: 0%;
+}
+
+.footer {
+  grid-column: 1/-1;
+  grid-row: 7/8;
+  display: grid;
+  grid-template-columns: 1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr;
+  background-color: #222222;
+}
+.footer__container {
+  grid-column: content-start-2/content-end-2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10rem 45rem 5rem;
+  padding-top: 8rem;
+  grid-gap: 4.8rem;
+}
+.footer__up {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #E6E6E6;
+  padding-bottom: 4.8rem;
+}
+.footer__paragraph {
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-transform: lowercase;
+  width: 90.2rem;
+  color: white;
+}
+.footer__coordinates-list {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.4rem;
+}
+
+.askQuestion {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.askQuestion__paragraph {
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: white;
+  margin-bottom: 2.4rem;
+}
+.askQuestion__button {
+  width: 25rem;
+}
+
+.nav-footer {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-self: center;
+}
+.nav-footer .nav__list {
+  display: block;
+}
+.nav-footer .nav__item {
+  display: block;
+  margin-bottom: 1.6rem;
+}
+.nav-footer .nav__link {
+  font-size: 1.4rem;
+}
+
+.avatar-footer .avatar__name {
+  font-family: Nunito Sans;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: white;
+}
+.avatar-footer .avatar__post {
+  font-family: Nunito Sans;
+  font-weight: 100;
+  font-size: 1.4rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #F7F7F7;
+}
+
+.coordinate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.4rem;
+}
+.coordinate__label {
+  font-family: Nunito Sans;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #8C8C8C;
+}
+.coordinate__value {
+  font-family: Nunito Sans;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.rights {
+  grid-column: 1/-1;
+  grid-row: 8/9;
+  display: grid;
+  grid-template-columns: 1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr;
+  background-color: #181818;
+}
+.rights__container {
+  grid-column: content-start-2/content-end-2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.rights__paragraph {
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: white;
 }

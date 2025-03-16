@@ -1,0 +1,123 @@
+.footer
+    grid-column: 1 / -1
+    grid-row: 7 / 8
+    display: grid
+    @include gridGeneralColumns
+    background-color: $color-black-gray
+    &__container
+        grid-column: content-start-2 / content-end-2
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 10rem 45rem 5rem
+        padding-top: 8rem
+        grid-gap: 4.8rem
+    &__up
+        grid-column: 1 / 4
+        grid-row: 1 / 2
+        display: flex
+        justify-content: space-between
+        align-items: center//flex-start
+        border-bottom: 1px solid $color-gray-dark
+        padding-bottom: 4.8rem
+    &__paragraph
+        // grid-column: 2 / 4
+        // grid-row: 1 / 2
+        font-family: Nunito Sans
+        font-weight: 400
+        font-size: 1.6rem
+        line-height: 120%
+        letter-spacing: 0%
+        text-transform: lowercase
+
+        width: 90.2rem
+        //align-self: center
+        color: $color-white
+    &__coordinates-list
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+        display: flex
+        flex-direction: column
+        gap: 2.4rem 
+.logo-footer
+    // grid-column: 1 / 2
+    // grid-row: 1 / 2
+.askQuestion
+    grid-column: 3 / 4
+    grid-row: 2 / 3
+    &__paragraph
+        font-family: Nunito Sans
+        font-weight: 400
+        font-size: 1.4rem
+        line-height: 150%
+        letter-spacing: 0%
+        color: $color-white
+        margin-bottom: 2.4rem 
+    &__button
+        width: 25rem
+.nav-footer
+    grid-column: 2 / 3
+    grid-row: 2 / 3
+    justify-self: center
+    & .nav__list
+        display: block
+    & .nav__item
+        display: block
+        margin-bottom: 1.6rem
+    & .nav__link
+        font-size: 1.4rem
+.avatar-footer 
+
+    .avatar__name
+        font-family: Nunito Sans
+        font-weight: 700
+        font-size: 2rem
+        line-height: 150%
+        letter-spacing: 0%
+        color: $color-white
+    .avatar__post
+        font-family: Nunito Sans
+        font-weight: 100
+        font-size: 1.4rem
+        line-height: 120%
+        letter-spacing: 0%
+        color: $color-gray-light
+.coordinate
+    display: flex
+    align-items: center
+    gap: 2.4rem
+    &__img
+    &__data
+
+    &__label
+        font-family: Nunito Sans
+        font-weight: 700
+        font-size: 1.2rem
+        line-height: 120%
+        letter-spacing: 0%
+        text-transform: uppercase
+        color: #8C8C8C
+    &__value
+        font-family: Nunito Sans
+        font-weight: 700
+        font-size: 1.6rem
+        line-height: 150%
+        letter-spacing: 0%
+        color: $color-white
+.rights
+    grid-column: 1 / -1
+    grid-row: 8 / 9
+    display: grid
+    @include gridGeneralColumns
+    background-color: #181818
+    &__container
+        grid-column: content-start-2 / content-end-2
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__paragraph
+        font-family: Nunito Sans
+        font-weight: 400
+        font-size: 1.4rem
+        line-height: 120%
+        letter-spacing: 0%
+        color: $color-white

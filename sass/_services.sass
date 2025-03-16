@@ -2,7 +2,8 @@
     grid-column: 1 / -1
     grid-row: 2 / 3
     display: grid
-    grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
+    // grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
+    @include gridGeneralColumns
     grid-template-rows: 96rem
     background-color: $color-gray-light
     &__content
@@ -87,6 +88,7 @@
     &:hover
         color: $color-white
         background-color: $color-blue
+        cursor: pointer
         & .services-item__img 
             display: none
             transition: 1s

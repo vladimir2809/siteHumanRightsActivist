@@ -2,7 +2,8 @@
     grid-column: 1 / -1
     grid-row: 5 / 6
     display: grid
-    grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
+    // grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
+    @include gridGeneralColumns
     background: url(../img/background-talkAbout.png) no-repeat center / cover
     &__content
         grid-column: content-start-2 / content-end-2 
