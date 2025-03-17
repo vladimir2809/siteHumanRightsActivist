@@ -4,42 +4,21 @@
     display: grid
     // grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
     @include gridGeneralColumns
-    grid-template-rows: 96rem
+    grid-template-rows: max-content//96rem
     background-color: $color-gray-light
     &__content
         grid-column: content-start-2 / content-end-2
         grid-row: 1 / 2
         padding: 8rem 0//2.4rem
-// .header-centr
-//     display: grid
-//     justify-items: center
-//     margin-bottom: 4.8rem
-//     &__title
-//         font-family: Nunito Sans
-//         font-weight: 800
-//         font-size: 2.8rem
-//         line-height: 150%
-//         letter-spacing: 0%
-//         text-transform: uppercase
-//         margin-bottom: 1rem
-//     &__line
-//         width: 5rem
-//         height: .3rem
-//         border: 2px solid $color-blue
-//         margin-bottom: 2.4rem
-//     &__text
-//         font-family: Nunito Sans
-//         font-weight: 400
-//         font-size: 1.6rem
-//         line-height: 120%
-//         letter-spacing: 0%
-//         text-align: center
-//         width: 92rem
 .services-contentForItems
     display: grid
-    grid-template-columns: repeat(3, min-content)
+    //grid-template-columns: repeat(3, min-content)
+    grid-template-columns: repeat( auto-fit, minmax(42.4rem, max-content) )
     grid-template-rows: max-content
+    justify-content: center
     grid-gap: 3.8rem 2.4rem
+    @include respond(tab-port)
+        grid-template-columns: repeat( auto-fit, minmax(33.6rem, max-content) )
 .services-item
     width: 42.4rem
     height: 25rem
@@ -52,6 +31,11 @@
     position: relative
     margin-bottom: 4.8rem
     //align-items: center
+    @include respond(tab-port)
+        width: 33.6rem
+        height: 22.5rem
+        padding: 3rem 3.2rem 0 3.2rem
+        transition: 0s
     &__img
         margin-bottom: 1.5rem
         transition: 1s
@@ -74,7 +58,7 @@
         line-height: 150%
         letter-spacing: 0%
         text-align: center
-        height: 3rem
+        //height: 3rem
         margin-bottom: 1rem
         //color: $color-black
     &__text
@@ -85,19 +69,25 @@
         line-height: 120%
         letter-spacing: 0%
         text-align: center
+        @include respond(tab-port)
+            width: 27.2rem
     &:hover
-        color: $color-white
-        background-color: $color-blue
-        cursor: pointer
+        @include respond(big-screen)
+            width: 42.4rem
+            color: $color-white
+            background-color: $color-blue
+            cursor: pointer
         & .services-item__img 
-            display: none
-            transition: 1s
+            @include respond(big-screen)
+                display: none
+                transition: 1s
         & .services-item__img-2
-            display: block
+            @include respond(big-screen)
+                display: block
         & .services-item__hover-border
-            display: block 
-.services-button
-    
+            @include respond(big-screen)
+                display: block 
+.services-button   
     position: relative
     left: 50%
     transform: translate(-50%, 0)

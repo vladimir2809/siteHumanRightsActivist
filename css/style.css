@@ -17,7 +17,8 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, minamax(3.3rem, 11rem)) [content-end] 1fr [full-end];
-  grid-template-rows: 87.2rem 96rem 59rem 74rem 59rem 91rem 53.5rem 5rem;
+  grid-template-rows: 87.2rem -webkit-max-content 59rem 74rem 59rem 91rem 53.5rem 5rem;
+  grid-template-rows: 87.2rem max-content 59rem 74rem 59rem 91rem 53.5rem 5rem;
 }
 
 .logo__title {
@@ -112,6 +113,11 @@ html {
   letter-spacing: 0%;
   text-align: center;
   width: 92rem;
+}
+@media only screen and (max-width: 1024px) {
+  .header-centr__text {
+    width: 69.6rem;
+  }
 }
 
 .avatar {
@@ -365,7 +371,8 @@ html {
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr;
-  grid-template-rows: 96rem;
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
   background-color: #F7F7F7;
 }
 .services__content {
@@ -376,11 +383,20 @@ html {
 
 .services-contentForItems {
   display: grid;
-  grid-template-columns: repeat(3, -webkit-min-content);
-  grid-template-columns: repeat(3, min-content);
+  grid-template-columns: repeat(auto-fit, minmax(42.4rem, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(42.4rem, max-content));
   grid-template-rows: -webkit-max-content;
   grid-template-rows: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-gap: 3.8rem 2.4rem;
+}
+@media only screen and (max-width: 1024px) {
+  .services-contentForItems {
+    grid-template-columns: repeat(auto-fit, minmax(33.6rem, -webkit-max-content));
+    grid-template-columns: repeat(auto-fit, minmax(33.6rem, max-content));
+  }
 }
 
 .services-item {
@@ -396,6 +412,15 @@ html {
   transition: 1s;
   position: relative;
   margin-bottom: 4.8rem;
+}
+@media only screen and (max-width: 1024px) {
+  .services-item {
+    width: 33.6rem;
+    height: 22.5rem;
+    padding: 3rem 3.2rem 0 3.2rem;
+    -webkit-transition: 0s;
+    transition: 0s;
+  }
 }
 .services-item__img {
   margin-bottom: 1.5rem;
@@ -424,7 +449,6 @@ html {
   line-height: 150%;
   letter-spacing: 0%;
   text-align: center;
-  height: 3rem;
   margin-bottom: 1rem;
 }
 .services-item__text {
@@ -436,21 +460,35 @@ html {
   letter-spacing: 0%;
   text-align: center;
 }
-.services-item:hover {
-  color: white;
-  background-color: #4F8FF0;
-  cursor: pointer;
+@media only screen and (max-width: 1024px) {
+  .services-item__text {
+    width: 27.2rem;
+  }
 }
-.services-item:hover .services-item__img {
-  display: none;
-  -webkit-transition: 1s;
-  transition: 1s;
+@media only screen and (min-width: 1340px) {
+  .services-item:hover {
+    width: 42.4rem;
+    color: white;
+    background-color: #4F8FF0;
+    cursor: pointer;
+  }
 }
-.services-item:hover .services-item__img-2 {
-  display: block;
+@media only screen and (min-width: 1340px) {
+  .services-item:hover .services-item__img {
+    display: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
-.services-item:hover .services-item__hover-border {
-  display: block;
+@media only screen and (min-width: 1340px) {
+  .services-item:hover .services-item__img-2 {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1340px) {
+  .services-item:hover .services-item__hover-border {
+    display: block;
+  }
 }
 
 .services-button {

@@ -14,7 +14,7 @@ $color-gray-dark: #E6E6E6
             @content
 
     @if $breakpoint == big-screen
-        @media only screen and (min-width: 1800px)
+        @media only screen and (min-width: 1340px)
             @content
 *, after, before
     padding: 0
@@ -26,7 +26,7 @@ html
 .container
     display: grid
     grid-template-columns: [full-start] 1fr [content-start] repeat(12, minamax(3.3rem,11rem)) [content-end] 1fr [full-end]
-    grid-template-rows: 87.2rem 96rem 59rem 74rem 59rem 91rem 53.5rem 5rem
+    grid-template-rows: 87.2rem max-content 59rem 74rem 59rem 91rem 53.5rem 5rem
 
 @mixin gridGeneralColumns
     grid-template-columns:  1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr
