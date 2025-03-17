@@ -17,8 +17,8 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [content-start] repeat(12, minamax(3.3rem, 11rem)) [content-end] 1fr [full-end];
-  grid-template-rows: 87.2rem -webkit-max-content 59rem 74rem 59rem 91rem 53.5rem 5rem;
-  grid-template-rows: 87.2rem max-content 59rem 74rem 59rem 91rem 53.5rem 5rem;
+  grid-template-rows: 87.2rem -webkit-max-content -webkit-max-content 74rem 59rem 91rem 53.5rem 5rem;
+  grid-template-rows: 87.2rem max-content max-content 74rem 59rem 91rem 53.5rem 5rem;
 }
 
 .logo__title {
@@ -504,12 +504,18 @@ html {
   grid-row: 3/4;
   display: grid;
   grid-template-columns: 1fr [content-start-2] repeat(12, minmax(3.3rem, 11rem)) [content-end-2] 1fr;
-  grid-template-rows: 59rem;
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
   background-color: white;
 }
 .company__content {
   grid-column: content-start-2/content-end-2;
   padding: 6rem 1.2rem;
+}
+@media only screen and (max-width: 1024px) {
+  .company__content {
+    padding: 6rem 7rem;
+  }
 }
 .company__container {
   display: grid;
@@ -518,6 +524,11 @@ html {
   grid-template-rows: max-content;
   grid-gap: 6.4rem;
   margin-bottom: 2.4rem;
+}
+@media only screen and (max-width: 1024px) {
+  .company__container {
+    grid-template-columns: 100%;
+  }
 }
 .company__text {
   grid-column: 1/2;
@@ -559,6 +570,11 @@ html {
   grid-row: 1/2;
   width: 100%;
   height: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .company__img {
+    display: none;
+  }
 }
 
 .ourLawers {
