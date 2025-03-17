@@ -10,7 +10,12 @@
         grid-column: content-start-2 / content-end-2 
         padding: 6rem 0rem
     &__container
+        width: 100%
+        @include respond(tab-port)
+            overflow: hidden
+            padding: 0 7rem
     &__list
+        width: 132rem
         display: flex
         gap: 2.4rem
 .lawers-item
@@ -58,7 +63,8 @@
         transition: 1s
         opacity: 0
         &:hover
-            opacity: 1
+            @include respond(big-screen)
+                opacity: 1
             //display: block
     &__status-front
         margin-bottom: 4rem

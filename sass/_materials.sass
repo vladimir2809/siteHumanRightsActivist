@@ -8,36 +8,49 @@
         grid-column: content-start-2 / content-end-2 
         padding: 8rem 0rem
     &__container
+        overflow: hidden
         margin-bottom: 5rem
+        padding-left: 7rem 
     &__list
         display: flex
+        //flex-wrap: wrap
         gap: 2.4rem
     &__button
         position: relative
         left: 50%
         transform: translateX(-50%)
 .materials-item
+    flex: none
     width: 42.0rem
     height: 48.1rem
+    @include respond(tab-port)
+        width: 33.6rem
     &:hover
         cursor: pointer
     &:hover &__front-rect
         transform: scale(1)
         opacity: 1
-    &:hover &__front-kvadr, &:hover &__front-glass, &:hover &__front-pointer
+    &:hover &__front-background, &:hover &__front-kvadr, &:hover &__front-glass, &:hover &__front-pointer
         opacity: 1
     &:hover &__title-5
         color: $color-blue
     &__img
+        width: 100%
         margin-bottom: 2.4rem
     &__front
         position: relative
         z-index: 2
         top: -2.7rem
+        display: none
+        @include respond(tab-port)
+            display: none
+        @include respond(big-screen)
+            display: block
         &-background
             position: absolute
             top: -27rem
             z-index: 3
+            opacity: 0
         &-rect
             position: absolute
             
