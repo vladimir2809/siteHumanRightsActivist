@@ -4,6 +4,18 @@ $color-black-gray: #222222
 $color-white: white
 $color-gray-light: #F7F7F7
 $color-gray-dark: #E6E6E6
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 758px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 1024px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
 *, after, before
     padding: 0
     margin: 0

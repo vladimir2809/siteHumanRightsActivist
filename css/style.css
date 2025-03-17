@@ -231,7 +231,7 @@ html {
   grid-column: content-start-3/content-end-3;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: 31rem 1fr 70em;
+  grid-template-columns: 31rem 1fr minmax(1fr, 70rem);
   grid-template-rows: 100%;
   padding: 0 2.4rem 0 2.4rem;
   z-index: 3;
@@ -243,10 +243,28 @@ html {
   align-self: center;
 }
 
-.nav_header {
+.nav-header {
   grid-column: 3/4;
   grid-row: 1/2;
   align-self: center;
+}
+@media only screen and (max-width: 1024px) {
+  .nav-header ul {
+    display: none;
+  }
+}
+.nav-header__hamburger {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .nav-header__hamburger {
+    text-align: right;
+    display: block;
+  }
+}
+.nav-header__hamburger-img {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .header-center {
@@ -289,8 +307,13 @@ html {
   letter-spacing: 0%;
   text-align: center;
   color: white;
-  width: 109rem;
+  width: 100rem;
   margin-bottom: 4rem;
+}
+@media only screen and (max-width: 1024px) {
+  .header-center__text {
+    width: 69.6rem;
+  }
 }
 .header-pallet {
   grid-column: content-start-3/content-end-3;
