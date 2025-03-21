@@ -10,16 +10,27 @@
         grid-column: content-start-2 / content-end-2
         grid-row: 1 / 2
         padding: 8rem 0//2.4rem
-.services-contentForItems
-    display: grid
-    //grid-template-columns: repeat(3, min-content)
-    grid-template-columns: repeat( auto-fit, minmax(42.4rem, max-content) )
-    grid-template-rows: max-content
-    justify-content: center
-    grid-gap: 3.8rem 2.4rem
-    @include respond(tab-port)
-        grid-template-columns: repeat( auto-fit, minmax(33.6rem, max-content) )
+    &__contentForItems
+        overflow: hidden
+        margin-bottom: 4.8rem
+    &__listItems
+        display: grid
+        //grid-template-columns: repeat(3, min-content)
+        grid-template-columns: repeat( auto-fit, minmax(42.4rem, max-content) )
+        grid-template-rows: max-content
+        justify-content: center
+        grid-gap: 3.8rem 2.4rem
+        @include respond(tab-port)
+            grid-template-columns: repeat( auto-fit, minmax(33.6rem, max-content) )
+            grid-gap: 2.4rem 2.4rem
+        @include respond(phone)
+            display: flex
+            justify-content: start
+            gap: 2.4rem
+            padding-left: 2.4rem
+
 .services-item
+    flex: none
     width: 42.4rem
     height: 25rem
     background-color: $color-white
@@ -29,13 +40,18 @@
     padding: 5rem 3.2rem 0 3.2rem
     transition: 1s
     position: relative
-    margin-bottom: 4.8rem
+    //margin-bottom: 4.8rem
+    overflow: hidden
     //align-items: center
     @include respond(tab-port)
         width: 33.6rem
-        height: 22.5rem
+        height: 22.9rem
         padding: 3rem 3.2rem 0 3.2rem
         transition: 0s
+    @include respond(phone)
+        width: 25rem
+        height: 21.5rem
+        padding: 3rem 3.2rem 0 3.2rem
     &__img
         margin-bottom: 1.5rem
         transition: 1s
@@ -61,6 +77,10 @@
         //height: 3rem
         margin-bottom: 1rem
         //color: $color-black
+        @include respond(tab-port)
+            line-height: 120%
+        @include respond(phone)
+            width: 21.8rem
     &__text
         width: 36rem
         font-family: Nunito Sans
@@ -71,6 +91,9 @@
         text-align: center
         @include respond(tab-port)
             width: 27.2rem
+            font-weight: 300
+        @include respond(phone)
+            width: 21.8rem
     &:hover
         @include respond(big-screen)
             width: 42.4rem

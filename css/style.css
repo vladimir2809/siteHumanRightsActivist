@@ -125,6 +125,11 @@ html {
     width: 69.6rem;
   }
 }
+@media only screen and (max-width: 430px) {
+  .header-centr__text {
+    width: 34.8rem;
+  }
+}
 
 .avatar {
   display: -webkit-box;
@@ -428,8 +433,11 @@ html {
   grid-row: 1/2;
   padding: 8rem 0;
 }
-
-.services-contentForItems {
+.services__contentForItems {
+  overflow: hidden;
+  margin-bottom: 4.8rem;
+}
+.services__listItems {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(42.4rem, -webkit-max-content));
   grid-template-columns: repeat(auto-fit, minmax(42.4rem, max-content));
@@ -441,13 +449,29 @@ html {
   grid-gap: 3.8rem 2.4rem;
 }
 @media only screen and (max-width: 1024px) {
-  .services-contentForItems {
+  .services__listItems {
     grid-template-columns: repeat(auto-fit, minmax(33.6rem, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(33.6rem, max-content));
+    grid-gap: 2.4rem 2.4rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .services__listItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 2.4rem;
+    padding-left: 2.4rem;
   }
 }
 
 .services-item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   width: 42.4rem;
   height: 25rem;
   background-color: white;
@@ -459,15 +483,22 @@ html {
   -webkit-transition: 1s;
   transition: 1s;
   position: relative;
-  margin-bottom: 4.8rem;
+  overflow: hidden;
 }
 @media only screen and (max-width: 1024px) {
   .services-item {
     width: 33.6rem;
-    height: 22.5rem;
+    height: 22.9rem;
     padding: 3rem 3.2rem 0 3.2rem;
     -webkit-transition: 0s;
     transition: 0s;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .services-item {
+    width: 25rem;
+    height: 21.5rem;
+    padding: 3rem 3.2rem 0 3.2rem;
   }
 }
 .services-item__img {
@@ -499,6 +530,16 @@ html {
   text-align: center;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 1024px) {
+  .services-item__title-4 {
+    line-height: 120%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .services-item__title-4 {
+    width: 21.8rem;
+  }
+}
 .services-item__text {
   width: 36rem;
   font-family: Nunito Sans;
@@ -511,6 +552,12 @@ html {
 @media only screen and (max-width: 1024px) {
   .services-item__text {
     width: 27.2rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .services-item__text {
+    width: 21.8rem;
   }
 }
 @media only screen and (min-width: 1340px) {
