@@ -20,6 +20,12 @@ html {
   grid-template-rows: 87.2rem -webkit-max-content -webkit-max-content 74rem 59rem 91rem 53.5rem 5rem;
   grid-template-rows: 87.2rem max-content max-content 74rem 59rem 91rem 53.5rem 5rem;
 }
+@media only screen and (max-width: 430px) {
+  .container {
+    grid-template-rows: 51.2rem -webkit-max-content -webkit-max-content 74rem 59rem 91rem 53.5rem 5rem;
+    grid-template-rows: 51.2rem max-content max-content 74rem 59rem 91rem 53.5rem 5rem;
+  }
+}
 
 .logo__title {
   font-family: Nunito Sans;
@@ -159,6 +165,11 @@ html {
   grid-template-rows: 5.2rem 82rem;
   background: black;
 }
+@media only screen and (max-width: 430px) {
+  .header {
+    grid-template-rows: 5.2rem 46rem;
+  }
+}
 
 .contact {
   grid-column: content-start-2/content-end-2;
@@ -168,16 +179,6 @@ html {
   grid-template-columns: 17rem 17rem 1fr max-content;
   grid-template-rows: 5.2rem;
   padding: 0 2.4rem;
-}
-
-.contact-phone {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
-.contact-email {
-  grid-column: 2/3;
-  grid-row: 1/2;
 }
 
 .contact-phone, .contact-email {
@@ -195,6 +196,21 @@ html {
   color: white;
 }
 
+.contact-phone {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.contact-email {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+@media only screen and (max-width: 430px) {
+  .contact-email {
+    display: none;
+  }
+}
+
 .contact-call {
   grid-column: 4/5;
   grid-row: 1/2;
@@ -204,6 +220,12 @@ html {
   -moz-font-size: 3.3rem;
   line-height: 2.1rem;
   letter-spacing: 0%;
+}
+@media only screen and (max-width: 430px) {
+  .contact-call {
+    grid-column: 2/4;
+    justify-self: end;
+  }
 }
 
 .contact-call a {
@@ -218,6 +240,11 @@ html {
   grid-template-columns: 1fr [content-start-3] repeat(12, minmax(3.3rem, 11rem)) [content-end-3] 1fr;
   grid-template-rows: 11.2rem;
   background-image: url("../img/background-header.png");
+}
+@media only screen and (max-width: 430px) {
+  .header-content {
+    background-image: url("../img/background-header-2.png");
+  }
 }
 
 .header-content__color-transparent-1 {
@@ -295,6 +322,11 @@ html {
   color: white;
   margin-bottom: 0.8rem;
 }
+@media only screen and (max-width: 430px) {
+  .header-center__title-small {
+    font-size: 1.8rem;
+  }
+}
 .header-center__title {
   font-family: Nunito Sans;
   font-weight: 600;
@@ -304,6 +336,11 @@ html {
   text-transform: uppercase;
   color: #4F8FF0;
   margin-bottom: 0.8rem;
+}
+@media only screen and (max-width: 430px) {
+  .header-center__title {
+    font-size: 3rem;
+  }
 }
 .header-center__text {
   font-family: Nunito Sans;
@@ -321,6 +358,12 @@ html {
     width: 69.6rem;
   }
 }
+@media only screen and (max-width: 430px) {
+  .header-center__text {
+    width: 34.2rem;
+    font-size: 1.6rem;
+  }
+}
 .header-pallet {
   grid-column: content-start-3/content-end-3;
   grid-row: 2/3;
@@ -333,6 +376,11 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media only screen and (max-width: 430px) {
+  .header-pallet {
+    display: none;
+  }
 }
 .nav__list {
   list-style-type: none;
