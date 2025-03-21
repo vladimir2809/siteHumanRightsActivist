@@ -947,6 +947,13 @@ html {
   padding-top: 8rem;
   grid-gap: 4.8rem;
 }
+@media only screen and (max-width: 1024px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10rem 35rem;
+    padding: 8rem 7rem 8rem 7rem;
+  }
+}
 .footer__up {
   grid-column: 1/4;
   grid-row: 1/2;
@@ -959,7 +966,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #8C8C8C;
   padding-bottom: 4.8rem;
 }
 .footer__paragraph {
@@ -971,6 +978,11 @@ html {
   text-transform: lowercase;
   width: 90.2rem;
   color: white;
+}
+@media only screen and (max-width: 1024px) {
+  .footer__paragraph {
+    display: none;
+  }
 }
 .footer__coordinates-list {
   grid-column: 1/2;
@@ -989,6 +1001,14 @@ html {
   grid-column: 3/4;
   grid-row: 2/3;
 }
+@media only screen and (max-width: 1024px) {
+  .askQuestion {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 33.5rem;
+    justify-self: end;
+  }
+}
 .askQuestion__paragraph {
   font-family: Nunito Sans;
   font-weight: 400;
@@ -1006,6 +1026,11 @@ html {
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: center;
+}
+@media only screen and (max-width: 1024px) {
+  .nav-footer {
+    display: none;
+  }
 }
 .nav-footer .nav__list {
   display: block;
@@ -1081,6 +1106,11 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 1.2rem;
+}
+@media only screen and (max-width: 1024px) {
+  .rights__container {
+    padding: 0 7rem;
+  }
 }
 .rights__paragraph {
   font-family: Nunito Sans;
