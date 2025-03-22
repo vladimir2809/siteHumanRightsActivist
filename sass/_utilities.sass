@@ -64,6 +64,10 @@
         letter-spacing: 0%
         text-transform: uppercase
         margin-bottom: 1rem
+        @include respond(tab-port)
+            font-size: 2.4rem
+        @include respond(phone)
+            font-size: 2rem
     &__line
         width: 5rem
         height: .3rem

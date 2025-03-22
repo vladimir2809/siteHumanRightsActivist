@@ -12,6 +12,8 @@
         margin-bottom: 5rem
         @include respond(tab-port)
             padding-left: 7rem 
+        @include respond(phone)
+            padding-left: 4.4rem
     &__list
         display: flex
         //flex-wrap: wrap
@@ -26,6 +28,9 @@
     height: 48.1rem
     @include respond(tab-port)
         width: 33.6rem
+    @include respond(phone)
+        width: 25rem
+        height: 41.7rem
     &:hover
         cursor: pointer
     &:hover &__front-rect
