@@ -10,7 +10,8 @@
     &__container
         overflow: hidden
         margin-bottom: 5rem
-        padding-left: 7rem 
+        @include respond(tab-port)
+            padding-left: 7rem 
     &__list
         display: flex
         //flex-wrap: wrap
