@@ -67,6 +67,7 @@
         background-image: url('../img/background-header-2.png')
     //padding: 0 2.4rem
 .header-content__color-transparent-1
+    position: relative
     grid-column: 1 / -1
     grid-row: 1 / 2
     background-color: #010101C2
@@ -79,6 +80,7 @@
     grid-column: content-start-3 / content-end-3
     grid-row: 1 / 2
     display: grid
+    //position: relative
     grid-template-columns: 31rem 1fr minmax(1fr, 70rem)
     grid-template-rows: 100%
     padding: 0 2.4rem 0 2.4rem
@@ -88,22 +90,74 @@
     grid-column: 1 / 2
     grid-row: 1 / 2
     align-self: center
+// .grayBackground
+//     grid-column: 1 / -1
+//     grid-row: 1 / 2
+//     position: relative
+//     width: 100vw
+//     height: 100vh
+//     background-color: $color-black-gray
+//     z-index: 5
+// .hamburger
+//     z-index: 10
+//     // position: relative
+//     // top: 4rem
+//     // right: -90%
+//     &__open-img
+//         display: none
+//         z-index: 10
+//         @include respond(tab-port)
+//             display: block
+//             float: right
+//             width: 2.4rem
+//             height: 2.4rem
+//     &__close-img
+//         display: none
+//         z-index: 10
+//         @include respond(tab-port)
+//             float: right
+//             display: none
+//             width: 2.4rem
+//             height: 2.4rem
 .nav-header
     grid-column: 3 / 4
     grid-row: 1 / 2
     align-self: center
+    //position: absolute
+    //z-index: 10
     & ul
         @include respond(tab-port)
+            grid-column: 1 / 2
             display: none
+            position: absolute
+            top: 10rem
+            left: 10rem
+        & li
+            @include respond(tab-port)
+                margin-bottom: 3rem
     &__hamburger
-        display: none
-        @include respond(tab-port)
-            text-align: right
-            display: block
+        //z-index: 10
         &-img
+            display: none
+            position: relative
+            z-index: 100
+            //z-index: 10
+            @include respond(tab-port)
+                display: block
+                float: right
+                width: 2.4rem
+                height: 2.4rem
+    &__close-img
+        display: none
+        //z-index: 10
+        position: relative
+        z-index: 100
+        @include respond(tab-port)
+            float: right
+            display: none
             width: 2.4rem
             height: 2.4rem
-
+            
 .header-center
     grid-column: 2 / 14
     //    grid-column: content-start-3 / content-end-3
