@@ -11,13 +11,16 @@
         padding: 6rem 0rem
     &__container
         width: 100%
+        overflow: hidden
         @include respond(tab-port)
-            overflow: hidden
+            //overflow: hidden
             padding: 0 7rem
         @include respond(phone)
             padding-left: 3rem
     &__list
+        position: relative
         width: 132rem
+        //transform: translateX(-100px)
         display: flex
         gap: 2.4rem
 .lawers-item

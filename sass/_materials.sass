@@ -15,9 +15,14 @@
         @include respond(phone)
             padding-left: 4.4rem
     &__list
+        width: 110rem
         display: flex
         //flex-wrap: wrap
         gap: 2.4rem
+        @include respond(tab-port)
+            width: 110rem
+        @include respond(phone)
+            width: 82rem 
     &__button
         position: relative
         left: 50%
