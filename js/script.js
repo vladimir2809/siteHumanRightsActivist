@@ -10,6 +10,10 @@ var movingList=[];
 var mousePress=false;
 let width=window.innerWidth;
 let distWidth=100;
+let listLimitStr=[];
+let listLimitStrOrigin=[];
+const valueStrlimit=60;
+const widthStrLimit=450;
 //var mouseX=null;
 var movingItem={
     x:0,
@@ -27,7 +31,19 @@ window.addEventListener('load',()=>{
     transparent=document.getElementsByClassName('header-content__color-transparent-1')[0];
     headerCentr=document.getElementsByClassName('header-center')[0];
     menuUl=document.getElementsByClassName('nav-header__list')[0];
+    listLimitStr=document.getElementsByClassName('limitStr');
+    //listLimitStrOrigin=JSON.parse(JSON.stringify(listLimitStr));
+    for (let i=0;i<listLimitStr.length;i++)
+    {
+
+        listLimitStrOrigin.push(listLimitStr[i].cloneNode(true));
+    }
+
     var list=document.getElementsByClassName('moving-list');
+    if (width<=widthStrLimit)
+    {
+        calcStrLimit(valueStrlimit)
+    }
     for (let i=0;i<list.length;i++)
     {
         let itemOne=JSON.parse(JSON.stringify(movingItem));
@@ -36,7 +52,7 @@ window.addEventListener('load',()=>{
         //movingList.push({x:0,item:list[i]});
         movingList.push(itemOne);
 
-        console.log(movingList);
+        //console.log(movingList);
     }
     for (let i=0;i<movingList.length;i++)
     {
@@ -49,7 +65,6 @@ window.addEventListener('load',()=>{
 
         
     }
-    //let x=1;
     setInterval(function(){
         let speed=2;
         for (let i=0;i<movingList.length;i++)
@@ -133,22 +148,37 @@ window.addEventListener('load',()=>{
         mousePress=false;
         mouseOldX=0;
         mouseX=0;
-        console.log("mousePress = false");
+        //console.log("mousePress = false");
     });
     hamburger.addEventListener('click',()=>{
         changeNav(flagMenu);
         flagMenu=true;
-        console.log('flagMenu='+flagMenu);
+        //console.log('flagMenu='+flagMenu);
     });
     closeMenu.addEventListener('click',()=>{
         changeNav(flagMenu);
         flagMenu=false;
-        console.log('flagMenu='+flagMenu);
+        //console.log('flagMenu='+flagMenu);
     });
 
 });
 window.addEventListener('resize',(e) => {
     width=window.innerWidth;
+    //console.log('Width='+width);
+    if (width<=widthStrLimit)
+    {
+        //console.log('STRRR');
+        calcStrLimit(valueStrlimit);
+    }
+    else
+    {
+        for (let i=0;i<listLimitStr.length;i++)
+        {
+            listLimitStr[i].innerHTML=listLimitStrOrigin[i].innerHTML;
+            ///console.log(listLimitStr[i].innerHTML);
+
+        }
+    }
     for (let i=0;i<movingList.length;i++)
     {
         movingList[i].x=1;
@@ -180,6 +210,37 @@ window.addEventListener('resize',(e) => {
     }
 
 });
+function calcStrLimit(len)
+{
+    //listLimitStr=JSON.parse(JSON.stringify(listLimitStrOrigin));
+    for (let i=0;i<listLimitStr.length;i++)
+    {
+        let str=listLimitStrOrigin[i].innerHTML;
+        let str2='';
+        let pos = 0;
+        while (true)
+        {
+            let foundPos = str.indexOf(' ', pos);
+            if (foundPos >= len)
+            {
+                break;
+            }
+
+            //console.log( `Найдено тут: ${foundPos}` );
+            pos = foundPos + 1; // продолжаем со следующей позиции
+            foundPos = str.indexOf(' ', pos);
+            if (foundPos >= len)
+            {
+                str2=str.slice(0,foundPos)+"...";
+                break;
+            }
+        
+        }
+        //console.log(str);
+        //console.log(str2);
+        listLimitStr[i].innerHTML=str2;
+    }
+}
 function changeNav(flag, flagWidth=false)
 {
 
