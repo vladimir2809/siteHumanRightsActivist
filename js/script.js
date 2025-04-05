@@ -218,28 +218,31 @@ function calcStrLimit(len)
         let str=listLimitStrOrigin[i].innerHTML;
         let str2='';
         let pos = 0;
-        while (true)
+        if (str.length>len)
         {
-            let foundPos = str.indexOf(' ', pos);
-            if (foundPos >= len)
+            while (true)
             {
-                break;
+                let foundPos = str.indexOf(' ', pos);
+                if (foundPos >= len)
+                {
+                    break;
+                }
+                
+                //console.log( `Найдено тут: ${foundPos}` );
+                pos = foundPos + 1; // продолжаем со следующей позиции
+                foundPos = str.indexOf(' ', pos);
+                if (foundPos >= len)
+                {
+                    str2=str.slice(0,foundPos)+"...";
+                    break;
+                }
+                
             }
-
-            //console.log( `Найдено тут: ${foundPos}` );
-            pos = foundPos + 1; // продолжаем со следующей позиции
-            foundPos = str.indexOf(' ', pos);
-            if (foundPos >= len)
-            {
-                str2=str.slice(0,foundPos)+"...";
-                break;
+            //console.log(str);
+            //console.log(str2);
+            listLimitStr[i].innerHTML=str2;
             }
-        
         }
-        //console.log(str);
-        //console.log(str2);
-        listLimitStr[i].innerHTML=str2;
-    }
 }
 function changeNav(flag, flagWidth=false)
 {
